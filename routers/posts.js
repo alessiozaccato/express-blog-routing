@@ -48,12 +48,15 @@ const posts = [
 
 // index
 router.get('/', function (req, res) {
-  res.send('Lista dei posts');
-  // res.json(`posts /  ${ id }`);
+  // res.send('Lista dei posts');
+
+  //posts list in json
+  res.json(posts);
 
 });
 // show
 router.get('/:id', function (req, res) {
+
   res.send('Dettagli del post ' + req.params.id);
 
 });
