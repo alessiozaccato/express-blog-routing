@@ -49,10 +49,13 @@ const posts = [
 // index
 router.get('/', function (req, res) {
   res.send('Lista dei posts');
+  // res.json(`posts /  ${ id }`);
+
 });
 // show
 router.get('/:id', function (req, res) {
   res.send('Dettagli del post ' + req.params.id);
+
 });
 // store
 router.post('/', function (req, res) {
@@ -74,4 +77,4 @@ router.delete('/:id', function (req, res) {
   res.send('Eliminazione del post ' + req.params.id);
 });
 
-module.exports = posts;
+module.exports = router;

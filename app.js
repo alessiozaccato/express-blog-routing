@@ -25,6 +25,9 @@ const postsRouter = require('./routers/posts.js');
 app.use(express.static('public'));
 app.use("/posts", postsRouter);
 
+
+
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
