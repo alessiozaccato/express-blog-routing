@@ -57,7 +57,10 @@ router.get('/', function (req, res) {
 // show
 router.get('/:id', function (req, res) {
 
-  res.send('Dettagli del post ' + req.params.id);
+  // res.send('Dettagli del post ' + req.params.id);
+
+  //result of my post from position of the array posts
+  res.json(posts[req.params.id]);
 
 });
 // store
